@@ -14,20 +14,26 @@
 - Linters
 - Webpack
 
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Clone the repository by using:
 
-Repo link: [](https://github.com/saifullah767/To-Do-list.git)
+[Repo link:](https://github.com/saifullah767/To-Do-list.git)
 
-### Deployment
+Clone this repository (you must have [Git Installed](https://github.com/saifullah767/To-Do-list.git))
 
-Preview Project: [](https://github.com/saifullah767/To-Do-list.git)
+`git clone https://github.com/saifullah767/To-Do-list.git`
+
+Then, move to the newly created folder `to-do-list` using this command
+
+`cd to-do-list`
+
+To open the project in Visual Studio Code type the following command inside the _to-do-list_ folder
+
+`code .`
+
+In order to visualize the project in your browser, please install the dependencies using `npm install` and the run the project from the root of the folder with this command `npm run start`
 
 ## Authors
 
