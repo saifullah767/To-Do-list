@@ -1,56 +1,47 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Today's to do List
 
-> Description the project.
+> It's a to do list application where we can mark and set our daily tasks or goal.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+- HTML
+- CSS
+- JAVASCRIPT
+- ES6
+- Linters
+- Webpack
 
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+### Clone the repository by using:
 
-### Setup
+[Repo link:](https://github.com/saifullah767/To-Do-list.git)
 
-### Install
+Clone this repository (you must have [Git Installed](https://github.com/saifullah767/To-Do-list.git))
 
-### Usage
+`git clone https://github.com/saifullah767/To-Do-list.git`
 
-### Run tests
+Then, move to the newly created folder `to-do-list` using this command
 
-### Deployment
+`cd to-do-list`
 
+To open the project in Visual Studio Code type the following command inside the _to-do-list_ folder
 
+`code .`
+
+In order to visualize the project in your browser, please install the dependencies using `npm install` and the run the project from the root of the folder with this command `npm run start`
 
 ## Authors
 
-👤 **Author1**
+👤 **Saifullah**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/saifullah767)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/saifullah-khan-b0637b169)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
@@ -61,13 +52,3 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
