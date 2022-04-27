@@ -32,9 +32,9 @@ const section = document.getElementById("wholeList");
 window.onload = () => {
   lists.forEach((toDo) => {
     const listHTML = `<li>
-    <input class="check-input" type="checkbox" name="" id="" value="${toDo.index}">
-    <label class="label" tabindex="0">${toDo.description}</label>
-    <i class="fa-solid fa-ellipsis-vertical"></i>
+    <input class='check-input' type='checkbox' value='${toDo.index}'>
+    <label class='label' tabindex='0'>${toDo.description}</label>
+    <i class='fa-solid fa-ellipsis-vertical'></i>
 </li>`;
     section.insertAdjacentHTML("beforeend", listHTML);
   });
