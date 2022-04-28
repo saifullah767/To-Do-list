@@ -1,4 +1,4 @@
-let List = [];
+var List = [];
 let isEditing = false;
 let todoEdit = null;
 
@@ -57,8 +57,7 @@ const displayToDo = () => {
     editBtn.innerHTML = '<i class="fa fa-edit"></i>';
 
     editBtn.addEventListener('click', () => {
-     let editlisting = editList(List[i]);
-     return editlisting;
+      editList(List[i]);
     });
 
     const deleteBtn = document.createElement('button');
