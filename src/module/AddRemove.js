@@ -1,4 +1,4 @@
-var List = [];
+let List = [];
 let isEditing = false;
 let todoEdit = null;
 
@@ -37,7 +37,7 @@ const displayToDo = () => {
     displayToDo();
   };
 
-  for (let i = 0; i < List.length; i += 1) {
+  for (const i = 0; i < List.length; i += 1) {
     const todoLiElement = document.createElement('li');
 
     const todoCheckboxElement = document.createElement('input');
