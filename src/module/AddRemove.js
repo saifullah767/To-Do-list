@@ -46,7 +46,8 @@ const displayToDo = () => {
     });
     saveData();
   };
-
+  
+  /* eslint-disable no-loop-func */
   for (let i = 0; i < List.length; i += 1) {
     const todoLiElement = document.createElement('li');
 
@@ -57,6 +58,10 @@ const displayToDo = () => {
     todoCheckboxElement.setAttribute('name', 'checkbox');
     todoCheckboxElement.setAttribute('value', List[i].index);
 
+    const todoDescriptionElement = document.createElement('p');
+    todoDescriptionElement.classList.add('label');
+    todoDescriptionElement.innerText = List[i].description;
+
     todoCheckboxElement.addEventListener('change', () => {
       if (todoCheckboxElement.checked) {
         todoDescriptionElement.classList.add('strike');
@@ -64,17 +69,12 @@ const displayToDo = () => {
       toggleToDoStatus(List[i]);
     });
 
-    const todoDescriptionElement = document.createElement('p');
-    todoDescriptionElement.classList.add('label');
-    todoDescriptionElement.innerText = List[i].description;
-
     const actionBtns = document.createElement('div');
     const editBtn = document.createElement('button');
     editBtn.classList.add('hide');
     editBtn.setAttribute('type', 'button');
     editBtn.innerHTML = '<i class="fa fa-edit"></i>';
 
-    /* eslint-disable no-loop-func */
 
     editBtn.addEventListener('click', () => {
       editList(List[i]);
