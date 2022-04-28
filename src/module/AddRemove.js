@@ -37,6 +37,16 @@ const displayToDo = () => {
     displayToDo();
   };
 
+  const toggleToDoStatus = (todo) => {
+    List = List.map((todoItem) => {
+      if (todoItem.index === todo.index) {
+        return { ...todo, completed: !todo.completed };
+      }
+      return todoItem;
+    });
+    saveData();
+  };
+
   for (let i = 0; i < List.length; i += 1) {
     const todoLiElement = document.createElement('li');
 
@@ -46,6 +56,13 @@ const displayToDo = () => {
     todoCheckboxElement.setAttribute('type', 'checkbox');
     todoCheckboxElement.setAttribute('name', 'checkbox');
     todoCheckboxElement.setAttribute('value', List[i].index);
+
+    todoCheckboxElement.addEventListener('change', () => {
+      if (todoCheckboxElement.checked) {
+        todoDescriptionElement.classList.add('strike');
+      } else todoDescriptionElement.classList.remove('strike');
+      toggleToDoStatus(List[i]);
+    });
 
     const todoDescriptionElement = document.createElement('p');
     todoDescriptionElement.classList.add('label');
@@ -133,11 +150,12 @@ const saveEdit = () => {
 const getIsEditing = () => isEditing;
 
 const clearallcompleted = () => {
-  List = List.filter((ind) => ind.index);
-  List = List.map((todo) => ({
-    completed: todo.completed,
-    description: todo.description,
-  }));
+  List = List.filter((todo) => !todo.completed);
+  List = List.map(
+    (todo, index) => (
+      { completed: todo.completed, description: todo.description, index: index + 1 }
+    ),
+  );
   saveData();
   displayToDo();
 };

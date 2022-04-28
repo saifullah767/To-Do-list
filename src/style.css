@@ -92,3 +92,8 @@ button {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 -3px 8px rgb(0 0 0 / 15%);
 }
+
+.strike {
+  text-decoration: line-through;
+  color: rgb(71, 80, 80);
+}
