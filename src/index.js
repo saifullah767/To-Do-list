@@ -1,6 +1,6 @@
 import './style.css';
 import {
-  retrivedata, addTodo, saveEdit, displayToDo, getIsEditing, clearCheckBox, clearallcompleted
+  retrivedata, addTodo, saveEdit, displayToDo, getIsEditing, clearCheckBox, clearallcompleted,
 } from './module/AddRemove.js';
 
 window.onload = () => {
@@ -17,7 +17,7 @@ desc.addEventListener('keyup', (event) => {
 });
 
 const clearbutton = document.getElementById('clearallbutton');
-clearbutton.addEventListener('click' , () => { clearallcompleted(); });
+clearbutton.addEventListener('click', () => { clearallcompleted(); });
 
 const reloadBtn = document.getElementById('reloadbtn');
 reloadBtn.addEventListener('click', () => {

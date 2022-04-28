@@ -133,14 +133,14 @@ const saveEdit = () => {
 const getIsEditing = () => isEditing;
 
 const clearallcompleted = () => {
-  List = List.filter((ind) => ind.index );
+  List = List.filter((ind) => ind.index);
   List = List.map((todo) => ({
     completed: todo.completed,
     description: todo.description,
   }));
   saveData();
   displayToDo();
-}
+};
 
 const clearCheckBox = () => {
   const completedTodoList = List.filter((todo) => todo.completed);
@@ -151,5 +151,5 @@ const clearCheckBox = () => {
 };
 
 export {
- retrivedata, clearCheckBox, clearallcompleted, addTodo, saveEdit, displayToDo, getIsEditing
+ retrivedata, clearCheckBox, clearallcompleted, addTodo, saveEdit, displayToDo, getIsEditing,
  };
