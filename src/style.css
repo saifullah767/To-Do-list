@@ -39,6 +39,7 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .list ul li:nth-child(1) {
@@ -54,19 +55,18 @@ label {
   width: 90%;
 }
 
-i {
-  color: rgb(139, 137, 137);
-  position: relative;
-  left: 1rem;
+.clearallbutton {
+  background-color: #fff;
+  padding: 15px 63px 15px 63px;
+  width: 100%;
+  border: none;
+  display: block;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
 }
 
 button {
   background-color: #fff;
-  padding: 15px 63px 15px 63px;
-  width: 100%;
-  outline: none;
   border: none;
-  display: block;
   box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
 }
 
@@ -76,4 +76,8 @@ button {
   box-shadow: 0 -3px 8px rgb(0 0 0 / 15%);
   padding: 20px 20px 20px 20px;
   font-size: 20px;
+}
+
+.hide {
+  display: none;
 }
