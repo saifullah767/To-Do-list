@@ -57,7 +57,7 @@ const displayToDo = () => {
     todoCheckboxElement.setAttribute('name', 'checkbox');
     todoCheckboxElement.setAttribute('value', List[i].index);
 
-    if(List[i].completed){
+    if (List[i].completed) {
       todoCheckboxElement.checked = true;
     }
 
