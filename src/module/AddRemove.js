@@ -56,7 +56,7 @@ const displayToDo = () => {
     const editBtn = document.createElement('button');
     editBtn.classList.add('hide');
     editBtn.setAttribute('type', 'button');
-    editBtn.innerHTML = `<i class="fa fa-edit"></i>`;
+    editBtn.innerHTML = '<i class="fa fa-edit"></i>';
 
     editBtn.addEventListener('click', () => {
       editList(List[i]);
@@ -130,4 +130,7 @@ const saveEdit = () => {
 };
 
 const getIsEditing = () => isEditing;
-export { retrivedata, addTodo, saveEdit, displayToDo, getIsEditing };
+
+export {
+  retrivedata, addTodo, saveEdit, displayToDo, getIsEditing   
+};
