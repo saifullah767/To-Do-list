@@ -54,10 +54,9 @@ ul {
 .label {
   width: 90%;
   color: black;
-  
 }
 
-.para-label{
+.para-label {
   text-decoration: line-through;
   color: grey;
 }
@@ -88,7 +87,7 @@ button {
   display: none;
 }
 
-.top{
+.top {
   display: flex;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 -3px 8px rgb(0 0 0 / 15%);
