@@ -1,4 +1,3 @@
-/* eslint-disable no-loop-func */
 let List = [];
 let isEditing = false;
 let todoEdit = null;
@@ -31,7 +30,6 @@ const removeList = (indexID) => {
     description: todo.description,
     index: index + 1,
   }));
-  // eslint-disable-next-line no-use-before-define
   displayToDo();
 };
 
