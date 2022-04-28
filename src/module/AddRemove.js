@@ -37,7 +37,7 @@ const displayToDo = () => {
     displayToDo();
   };
 
-  for (const i = 0; i < List.length; i += 1) {
+  for (var i = 0; i < List.length; i += 1) {
     const todoLiElement = document.createElement('li');
 
     const todoCheckboxElement = document.createElement('input');
