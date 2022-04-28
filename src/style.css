@@ -64,6 +64,12 @@ label {
   box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
 }
 
+button{
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+}
+
 .add-input {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
