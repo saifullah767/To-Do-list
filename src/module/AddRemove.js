@@ -15,7 +15,7 @@ const retrivedata = () => {
   }
 };
 
-const editList = (todo) => {
+let editList = (todo) => {
   isEditing = true;
   todoEdit = todo;
   const desc = document.getElementById('addtodo');
