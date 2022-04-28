@@ -37,7 +37,7 @@ const displayToDo = () => {
     displayToDo();
   };
 
-  for (var i = 0; i < List.length; i += 1) {
+  for (let i = 0; i < List.length; i += 1) {
     const todoLiElement = document.createElement('li');
 
     const todoCheckboxElement = document.createElement('input');
@@ -55,6 +55,8 @@ const displayToDo = () => {
     editBtn.classList.add('hide');
     editBtn.setAttribute('type', 'button');
     editBtn.innerHTML = '<i class="fa fa-edit"></i>';
+
+    /* eslint-disable no-loop-func */
 
     editBtn.addEventListener('click', () => {
       editList(List[i]);
