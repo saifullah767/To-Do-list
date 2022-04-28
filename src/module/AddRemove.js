@@ -56,7 +56,7 @@ const displayToDo = () => {
     const editBtn = document.createElement('button');
     editBtn.classList.add('hide');
     editBtn.setAttribute('type', 'button');
-    editBtn.innerHTML = `<i class='fa fa-edit'></i>`;
+    editBtn.innerHTML = `<i class="fa fa-edit"></i>`;
 
     editBtn.addEventListener('click', () => {
       editList(List[i]);
@@ -65,7 +65,7 @@ const displayToDo = () => {
     const deleteBtn = document.createElement('button');
     deleteBtn.classList.add('hide');
     deleteBtn.setAttribute('type', 'button');
-    deleteBtn.innerHTML = `<i class='fa fa-trash'>`;
+    deleteBtn.innerHTML = '<i class="fa fa-trash">';
 
     deleteBtn.addEventListener('click', () => {
       removeList(List[i].index);
@@ -74,7 +74,7 @@ const displayToDo = () => {
     const moreEllipsisBtn = document.createElement('button');
     moreEllipsisBtn.classList.add('more-btn');
     moreEllipsisBtn.setAttribute('type', 'button');
-    moreEllipsisBtn.innerHTML = `<i class='fa fa-ellipsis-v'></i>`;
+    moreEllipsisBtn.innerHTML = '<i class="fa fa-ellipsis-v"></i>';
 
     moreEllipsisBtn.addEventListener('click', () => {
       editBtn.classList.toggle('hide');
@@ -130,5 +130,4 @@ const saveEdit = () => {
 };
 
 const getIsEditing = () => isEditing;
-
-export {retrivedata, addTodo, saveEdit, displayToDo, getIsEditing};
+export { retrivedata, addTodo, saveEdit, displayToDo, getIsEditing };
