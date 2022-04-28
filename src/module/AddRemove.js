@@ -37,26 +37,46 @@ const displayToDo = () => {
     displayToDo();
   };
 
+  const toggleToDoStatus = (todo) => {
+    List = List.map((todoItem) => {
+      if (todoItem.index === todo.index) {
+        return { ...todo, completed: !todo.completed };
+      }
+      return todoItem;
+    });
+    saveData();
+  };
+  /* eslint-disable no-loop-func */
   for (let i = 0; i < List.length; i += 1) {
     const todoLiElement = document.createElement('li');
 
     const todoCheckboxElement = document.createElement('input');
     todoCheckboxElement.classList.add('check-input');
+    todoCheckboxElement.setAttribute('id', 'checkline');
     todoCheckboxElement.setAttribute('type', 'checkbox');
     todoCheckboxElement.setAttribute('name', 'checkbox');
     todoCheckboxElement.setAttribute('value', List[i].index);
 
+    if (List[i].completed) {
+      todoCheckboxElement.checked = true;
+    }
+
     const todoDescriptionElement = document.createElement('p');
     todoDescriptionElement.classList.add('label');
     todoDescriptionElement.innerText = List[i].description;
+
+    todoCheckboxElement.addEventListener('change', () => {
+      if (todoCheckboxElement.checked) {
+        todoDescriptionElement.classList.add('strike');
+      } else todoDescriptionElement.classList.remove('strike');
+      toggleToDoStatus(List[i]);
+    });
 
     const actionBtns = document.createElement('div');
     const editBtn = document.createElement('button');
     editBtn.classList.add('hide');
     editBtn.setAttribute('type', 'button');
     editBtn.innerHTML = '<i class="fa fa-edit"></i>';
-
-    /* eslint-disable no-loop-func */
 
     editBtn.addEventListener('click', () => {
       editList(List[i]);
@@ -131,6 +151,25 @@ const saveEdit = () => {
 
 const getIsEditing = () => isEditing;
 
+const clearallcompleted = () => {
+  List = List.filter((todo) => !todo.completed);
+  List = List.map(
+    (todo, index) => (
+      { completed: todo.completed, description: todo.description, index: index + 1 }
+    ),
+  );
+  saveData();
+  displayToDo();
+};
+
+const clearCheckBox = () => {
+  const completedTodoList = List.filter((todo) => todo.completed);
+  completedTodoList.forEach((todoItem) => {
+    todoItem.completed = false;
+  });
+  saveData();
+};
+
 export {
-  retrivedata, addTodo, saveEdit, displayToDo, getIsEditing,
+ retrivedata, clearCheckBox, clearallcompleted, addTodo, saveEdit, displayToDo, getIsEditing,
  };
