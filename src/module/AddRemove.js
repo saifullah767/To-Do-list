@@ -37,11 +37,13 @@ const displayToDo = () => {
     displayToDo();
   };
 
+  
   for (let i = 0; i < List.length; i += 1) {
     const todoLiElement = document.createElement('li');
 
     const todoCheckboxElement = document.createElement('input');
     todoCheckboxElement.classList.add('check-input');
+    todoCheckboxElement.setAttribute('id','checkline');
     todoCheckboxElement.setAttribute('type', 'checkbox');
     todoCheckboxElement.setAttribute('name', 'checkbox');
     todoCheckboxElement.setAttribute('value', List[i].index);
@@ -131,6 +133,26 @@ const saveEdit = () => {
 
 const getIsEditing = () => isEditing;
 
+const clearallcompleted = () => {
+  
+  List = List.filter((ind) => ind.index );
+  List = List.map((todo) => ({
+    completed: todo.completed,
+    description: todo.description,
+  }));
+  saveData();
+  displayToDo();
+
+}
+
+const clearCheckBox = () => {
+  const completedTodoList = List.filter((todo) => todo.completed);
+  completedTodoList.forEach((todoItem) => {
+    todoItem.completed = false;
+  });
+  saveData();
+};
+
 export {
-  retrivedata, addTodo, saveEdit, displayToDo, getIsEditing,
+  retrivedata, clearCheckBox, clearallcompleted, addTodo, saveEdit, displayToDo, getIsEditing
  };
