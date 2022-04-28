@@ -23,6 +23,10 @@ const editList = (todo) => {
   desc.focus();
 };
 
+const displayToDo = () => {
+  const ListElement = document.getElementById('wholeList');
+  ListElement.innerHTML = '';
+
   const removeList = (indexID) => {
     List = List.filter((ind) => ind.index !== indexID);
     List = List.map((todo, index) => ({
@@ -42,10 +46,6 @@ const editList = (todo) => {
     });
     saveData();
   };
-
-  const displayToDo = () => {
-  const ListElement = document.getElementById('wholeList');
-  ListElement.innerHTML = '';
   /* eslint-disable no-loop-func */
   for (let i = 0; i < List.length; i += 1) {
     const todoLiElement = document.createElement('li');
