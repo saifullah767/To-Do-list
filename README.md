@@ -4,7 +4,6 @@
 
 > It's a to do list application where we can mark and set our daily tasks or goal. And also edit and delete them
 
-
 ## Built With
 
 - HTML
