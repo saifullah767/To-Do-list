@@ -1,7 +1,10 @@
 import './style.css';
 import {
-  retrivedata, addTodo, saveEdit, displayToDo, getIsEditing, clearCheckBox, clearallcompleted,
+  retrivedata, saveEdit, displayToDo, getIsEditing, clearCheckBox, clearallcompleted,
 } from './module/AddRemove.js';
+import {
+ addTodo,
+} from './module/addRemoveitem.js';
 
 window.onload = () => {
   retrivedata();

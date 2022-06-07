@@ -1,3 +1,6 @@
+import {
+  removeList,
+ } from './addRemoveitem.js';
 let List = [];
 let isEditing = false;
 let todoEdit = null;
@@ -114,23 +117,23 @@ const displayToDo = () => {
   saveData();
 };
 
-const addTodo = () => {
-  const desc = document.getElementById('addtodo');
-  if (desc.value) {
-    const completed = false;
-    const description = desc.value;
-    const index = List.length + 1;
-    List.push({ completed, description, index });
-    displayToDo();
-    saveData();
-    desc.value = null;
-  }
-  List = List.map((todo, index) => ({
-    completed: todo.completed,
-    description: todo.description,
-    index: index + 1,
-  }));
-};
+// const addTodo = () => {
+//   const desc = document.getElementById('addtodo');
+//   if (desc.value) {
+//     const completed = false;
+//     const description = desc.value;
+//     const index = List.length + 1;
+//     List.push({ completed, description, index });
+//     displayToDo();
+//     saveData();
+//     desc.value = null;
+//   }
+//   List = List.map((todo, index) => ({
+//     completed: todo.completed,
+//     description: todo.description,
+//     index: index + 1,
+//   }));
+// };
 
 const saveEdit = () => {
   const desc = document.getElementById('addtodo');
@@ -171,5 +174,5 @@ const clearCheckBox = () => {
 };
 
 export {
- retrivedata, clearCheckBox, clearallcompleted, addTodo, saveEdit, displayToDo, getIsEditing,
+ retrivedata, clearCheckBox, clearallcompleted, saveEdit, displayToDo, getIsEditing, saveData,  List
  };
