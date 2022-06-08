@@ -16,6 +16,9 @@
 
 To get a local copy up and running follow these simple example steps.
 
+# Live Preview:
+[Click here to Visit site:](https://62a0b6aa49f5410308469bf8--calm-dragon-c914a6.netlify.app/)
+
 ### Clone the repository by using:
 
 [Repo link:](https://github.com/saifullah767/To-Do-list.git)
